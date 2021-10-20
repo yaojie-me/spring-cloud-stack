@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  max-http-header-size: 1024000
+
+spring:
+  application:
+    name: service-gateway
+  cloud:
+    consul:
+      host: 47.101.189.119
+      port: 8500
+      discovery:
+        instance-id: ${spring.application.name}-${server.port}
+    gateway:
+      routes:
+        - id: baidu
+          uri: https://www.baidu.com
+          predicates:
+            - Path=/baidu
+
+
+
