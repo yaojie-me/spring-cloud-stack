@@ -16,6 +16,7 @@
         <module>service-consumer</module>
         <module>service-gateway</module>
         <module>service-oauth2-server</module>
+        <module>service-sharding-jdbc</module>
     </modules>
 
     <properties>
